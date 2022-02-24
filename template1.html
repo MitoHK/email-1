@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +53,7 @@
         }
         #details--title{
             background-color: #E0F3FF;
-            padding: 20px 0 20px 0;
+            padding: 20px 0 0 0;
         }
         .Details--constant{
             font-weight: 700;
@@ -362,7 +362,20 @@
           .btn-primary a:hover {
             background-color: #34495e !important;
             border-color: #34495e !important; 
-          } 
+          } .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+          }
+          .h2-low {
+            font-family: sans-serif;
+            font-size: 14px;
+          }
         }
       
   
@@ -384,14 +397,13 @@
                   <td class="wrapper">
                     <table role="presentation">
                       <tr>
-                        <img src="https://i.ibb.co/ZcFr7Rh/Banner.png" alt="Banner.png" border="0" width="360" height="60">
+                        <img src="https://i.ibb.co/ZcFr7Rh/Banner.png" alt="Mi billetera virtual" border="0" width="360" height="60">
                         <td>
                           <img src="https://i.ibb.co/RgjdmH8/ahorro.png" alt="ahorro" border="0">
                           <H1>Axel, ¡Te enviaron dinero!</H1>
-                          <br>
-                          <table id="details">
+                          <table id="details" role="presentation">
                             <tr>
-                                <th colspan="2" id="details--title">Detalles de la operación</th>
+                                <th colspan="2" id="details--title"><h2 class="h2-low">Detalles de la operación</h2></th>
                               </tr>
                              
                             <tbody>
@@ -405,7 +417,7 @@
                                 </tr>
                                 <tr>
                                     <td class="Details--constant">Cantidad</td>
-                                    <td>$5000</td>
+                                    <td><p class="sr-only">5000 Pesos</p><span aria-hidden="true">$5000</span></td>
                                 </tr>
                             </tbody>
                         
@@ -414,8 +426,7 @@
                         </td>
                       </tr>
                     </table>
-                    <br>
-                    <table>
+                    <table style="margin-top: 1rem;">
                       <td class="info">
                         <span class="balloon-icon">
                           <span class="material-icons" >
